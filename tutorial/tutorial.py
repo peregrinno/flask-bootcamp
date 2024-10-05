@@ -41,6 +41,7 @@ def listar_contatos():
     result = contatos_schema.dump(contatos)
     return responseConstructor(result, 'Operação realizada com sucesso.'), 200
 
+#127.0.0.1:5000/contatos/nome=Joaozinho
 @app.route('/contato/<string:nome>', methods=['GET'])
 def obter_contato(nome):
     for contato in contatos:
